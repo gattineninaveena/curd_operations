@@ -1,0 +1,50 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "Sebastian",
+      "last_name": "Eschweiler",
+      "email": "sebastian@codingthesmartway.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Steve",
+      "last_name": "Palmer",
+      "email": "steve@codingthesmartway.com"
+    },
+    {
+      "id": 3,
+      "first_name": "Ann",
+      "last_name": "Smith",
+      "email": "ann@codingthesmartway.com"
+    },
+    {
+      "id": 4,
+      "first_name": "Tushar",
+      "last_name": "Dhore",
+      "email": "tushar@tusharworld.com"
+    },
+    {
+      "id": 5,
+      "last_name": "sdfsdf"
+    },
+    {
+      "firstname": "John",
+      "lastname": "Snow",
+      "email": "john@yahoo.com",
+      "id": 6
+    },
+    {
+      "first_name": "Alex",
+      "last_name": "Parker",
+      "email": "alex@gmail.com",
+      "id": 7
+    },
+    {
+      "first_name": "NewNew",
+      "last_name": "NewLast",
+      "email": "new@new.com",
+      "id": 8
+    }
+  ]
+}

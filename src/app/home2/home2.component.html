@@ -1,0 +1,78 @@
+<button type="button" class="btn btn-primary float-left" (click)="showForm = true">Add Students</button>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Class</th>
+      <th>Year</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let student of students; let i=index">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.class }}</td>
+      <td>{{ student.enroll }}</td>
+      <td>{{ student.city }}</td>
+      <td>{{ student.country }}</td>
+      <td>
+        <button href="#" class="btn btn-info" (click)='getStudentData(student.id); showForm = true; editBtn = true'>Edit</button>
+        <button type="button" class="btn btn-danger" (click)="deleteStud(student.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br>
+<div class="panel panel-primary" *ngIf="showForm">
+  <hr>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <form #playlistForm="ngForm">
+        <div class="form-group">
+          <label class="col-md-4">Student ID</label>
+          <input type="text" class="form-control" name="id" [(ngModel)]='studData.id' [readonly]="editBtn ? 'true' : false " >
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Student Name</label>
+          <input type="text" class="form-control" name="name" [(ngModel)]='studData.name'>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Email</label>
+          <input type="text" class="form-control" name="email" [(ngModel)]='studData.email'>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Class</label>
+          <input type="text" class="form-control" name="class" [(ngModel)]='studData.class'>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Enrollment Year</label>
+          <input type="text" class="form-control" name="enroll" [(ngModel)]='studData.enroll'>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">City</label>
+          <input type="text" class="form-control" name="city" [(ngModel)]='studData.city'>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Country</label>
+          <input type="text" class="form-control" name="country" [(ngModel)]='studData.country'>
+        </div>
+
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" (click)='addStudent(); showForm = false; playlistForm.reset();'  *ngIf="!editBtn">Save</button>
+          <button type="button" class="btn btn-primary" (click)='editStudent(studData.id); showForm = false; playlistForm.reset(); editBtn = false; ' *ngIf="editBtn">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

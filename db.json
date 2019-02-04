@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "id": "5481",
+      "name": "Md Jasim",
+      "email": "jasim.cuh@gmail.com",
+      "class": "MCA",
+      "enroll": "2014",
+      "city": "Hyderabad",
+      "country": "India"
+    },
+    {
+      "id": "2",
+      "name": "sandeep",
+      "email": "klnhjkl",
+      "class": "jnlkj",
+      "enroll": "jklj",
+      "city": "jlk;j",
+      "country": "jl;j"
+    }
+  ]
+}
